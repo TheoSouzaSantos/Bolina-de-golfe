@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<title>Quizz de Atores e Atrizes</title>
+    <style>
+        body{
+            background-image: url('imagens/walter.webp');
+            backdrop-filter: blur(4px);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            color: white;
+           
+        }
+    </style>
+</head>
+
+<body text="White">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#" >Quizz</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="menu.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="imagens.html">Jogo de Imagens</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="tibet.html">Teste Tibet</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="numeros.html">Jogo de Adivinhação</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="quizz.html">Quiz</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="jogo.html">Jogo Livre</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="sorteio.html">Sorteio de números</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="desenvolvedores.html">Desenvolvedores</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+	<div class="alert alert-primary alert-dismissible fade show" role="alert">
+        <strong>Vamos começar nosso quiz!</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+<script language="Javascript"> 
+
+       var pergunta=[]; // Array de perguntas
+       pergunta[0] = "Quem interpretou o personagem Jack Dawson em 'Titanic'?";
+       pergunta[1] = "Qual atriz ganhou um Oscar por sua atuação em 'A Rainha'?";
+       pergunta[2] = "Quem é conhecido como o 'Rei do Hollywood'?";
+       pergunta[3] = "Qual ator interpretou o Coringa em 'O Cavaleiro das Trevas'?";
+       pergunta[4] = "Quem é a protagonista da série 'Stranger Things'?";
+       pergunta[5] = "Qual ator é famoso por suas atuações em filmes de ação como 'Missão Impossível'?";
+       pergunta[6] = "Quem ganhou o Oscar de Melhor Atriz em 2020?";
+       pergunta[7] = "Qual ator foi nomeado para o Oscar por 'O Lobo de Wall Street'?";
+       pergunta[8] = "Quem é a atriz principal de 'O Diabo Veste Prada'?";
+       pergunta[9] = "Qual ator interpretou o papel principal em 'Forrest Gump'?";
+       pergunta[10] = "Quem é a atriz que fez 'Wonder Woman'?";
+
+       document.write('<form name="formQuizz" method="get"> ');	
+       document.write( '<ol>');
+
+       document.write('<li>'+pergunta[0] +'</li>');	
+       document.write('<INPUT TYPE="RADIO" NAME="r0" VALUE="Brad Pitt">Brad Pitt <br />');
+	   document.write('<INPUT TYPE="RADIO" NAME="r0" VALUE="Leonardo DiCaprio">Leonardo DiCaprio <br />');											
+       document.write('<INPUT TYPE="RADIO" NAME="r0" VALUE="Johnny Depp">Johnny Depp <br />');
+       document.write('<INPUT TYPE="RADIO" NAME="r0" VALUE="Tom Hanks">Tom Hanks <P>');
+
+       document.write('<li>'+pergunta[1] +'</li>');	
+       document.write('<INPUT TYPE="RADIO" NAME="r1" VALUE="Meryl Streep">Meryl Streep<br />');
+       document.write('<INPUT TYPE="RADIO" NAME="r1" VALUE="Kate Winslet">Kate Winslet<br />');
+	   document.write('<INPUT TYPE="RADIO" NAME="r1" VALUE="Helen Mirren">Helen Mirren<br />');	
+       document.write('<INPUT TYPE="RADIO" NAME="r1" VALUE="Sandra Bullock">Sandra Bullock<P>');
+
+       document.write('<li>'+pergunta[2] +'</li>');	
+	   document.write('<INPUT TYPE="RADIO" NAME="r2" VALUE="Robert Downey Jr.">Robert Downey Jr.<br />');	
+	   document.write('<INPUT TYPE="RADIO" NAME="r2" VALUE="Humphrey Bogart">Humphrey Bogart<br />');					
+       document.write('<INPUT TYPE="RADIO" NAME="r2" VALUE="Tom Cruise">Tom Cruise<br />');
+       document.write('<INPUT TYPE="RADIO" NAME="r2" VALUE="John Wayne">John Wayne<P>');
+
+       document.write('<li>'+pergunta[3] +'</li>');	
+       document.write('<INPUT TYPE="RADIO" NAME="r3" VALUE="Heath Ledger">Heath Ledger<br />');
+       document.write('<INPUT TYPE="RADIO" NAME="r3" VALUE="Jared Leto">Jared Leto<br />');							
+       document.write('<INPUT TYPE="RADIO" NAME="r3" VALUE="Joaquin Phoenix">Joaquin Phoenix<br />');
+       document.write('<INPUT TYPE="RADIO" NAME="r3" VALUE="Jack Nicholson">Jack Nicholson<P>');
+
+       document.write('<li>'+pergunta[4] +'</li>');	
+       document.write('<INPUT TYPE="RADIO" NAME="r4" VALUE="Millie Bobby Brown">Millie Bobby Brown<br />');
+       document.write('<INPUT TYPE="RADIO" NAME="r4" VALUE="Sadie Sink">Sadie Sink<br />');
+       document.write('<INPUT TYPE="RADIO" NAME="r4" VALUE="Natalia Dyer">Natalia Dyer<br />');
+       document.write('<INPUT TYPE="RADIO" NAME="r4" VALUE="Winona Ryder">Winona Ryder<P>');
+
+       document.write('<li>'+pergunta[5] +'</li>');	
+       document.write('<INPUT TYPE="RADIO" NAME="r5" VALUE="Tom Cruise">Tom Cruise<br />');
+       document.write('<INPUT TYPE="RADIO" NAME="r5" VALUE="Bruce Willis">Bruce Willis<br />');		
+       document.write('<INPUT TYPE="RADIO" NAME="r5" VALUE="Arnold Schwarzenegger">Arnold Schwarzenegger<br />');
+       document.write('<INPUT TYPE="RADIO" NAME="r5" VALUE="Jason Statham">Jason Statham<P>');
+
+       document.write('<li>'+pergunta[6] +'</li>');	
+       document.write('<INPUT TYPE="RADIO" NAME="r6" VALUE="Renee Zellweger">Renee Zellweger<br />');
+       document.write('<INPUT TYPE="RADIO" NAME="r6" VALUE="Charlize Theron">Charlize Theron<br />');		
+       document.write('<INPUT TYPE="RADIO" NAME="r6" VALUE="Joaquin Phoenix">Joaquin Phoenix<br />');
+       document.write('<INPUT TYPE="RADIO" NAME="r6" VALUE="Scarlett Johansson">Scarlett Johansson<P>');
+
+       document.write('<li>'+pergunta[7] +'</li>');	
+       document.write('<INPUT TYPE="RADIO" NAME="r7" VALUE="Leonardo DiCaprio">Leonardo DiCaprio<br />');
+       document.write('<INPUT TYPE="RADIO" NAME="r7" VALUE="Matthew McConaughey">Matthew McConaughey<br />');		
+       document.write('<INPUT TYPE="RADIO" NAME="r7" VALUE="Robert Pattinson">Robert Pattinson<br />');
+       document.write('<INPUT TYPE="RADIO" NAME="r7" VALUE="Ryan Gosling">Ryan Gosling<P>');
+
+       document.write('<li>'+pergunta[8] +'</li>');	
+       document.write('<INPUT TYPE="RADIO" NAME="r8" VALUE="Anne Hathaway">Anne Hathaway<br />');
+       document.write('<INPUT TYPE="RADIO" NAME="r8" VALUE="Emily Blunt">Emily Blunt<br />');		
+       document.write('<INPUT TYPE="RADIO" NAME="r8" VALUE="Natalie Portman">Natalie Portman<br />');
+       document.write('<INPUT TYPE="RADIO" NAME="r8" VALUE="Jennifer Aniston">Jennifer Aniston<P>');
+
+       document.write('<li>'+pergunta[9] +'</li>');	
+       document.write('<INPUT TYPE="RADIO" NAME="r9" VALUE="Tom Hanks">Tom Hanks<br />');
+       document.write('<INPUT TYPE="RADIO" NAME="r9" VALUE="Matt Damon">Matt Damon<br />');		
+       document.write('<INPUT TYPE="RADIO" NAME="r9" VALUE="Robert De Niro">Robert De Niro<br />');
+       document.write('<INPUT TYPE="RADIO" NAME="r9" VALUE="Al Pacino">Al Pacino<P>');
+
+       document.write('<li>'+pergunta[10] +'</li>');	
+       document.write('<INPUT TYPE="RADIO" NAME="r10" VALUE="Gal Gadot">Gal Gadot<br />');
+       document.write('<INPUT TYPE="RADIO" NAME="r10" VALUE="Scarlett Johansson">Scarlett Johansson<br />');		
+       document.write('<INPUT TYPE="RADIO" NAME="r10" VALUE="Brie Larson">Brie Larson<br />');
+       document.write('<INPUT TYPE="RADIO" NAME="r10" VALUE="Margot Robbie">Margot Robbie<P>');
+
+       document.write('</ol> ');
+
+       document.write('<input type="button" name="verifica" value="Ver o Resultado" onclick="respostas()">');
+       document.write('<input type="reset" name="limpar" value="Limpar Respostas">');
+       document.write('</form> ');	
+
+function respostas(){
+       var acertos=0;
+
+       var resp0=document.formQuizz.r0.value;
+       var resp1=document.formQuizz.r1.value;
+       var resp2=document.formQuizz.r2.value;
+       var resp3=document.formQuizz.r3.value;
+       var resp4=document.formQuizz.r4.value;
+       var resp5=document.formQuizz.r5.value;
+       var resp6=document.formQuizz.r6.value;
+       var resp7=document.formQuizz.r7.value;
+       var resp8=document.formQuizz.r8.value;
+       var resp9=document.formQuizz.r9.value;
+       var resp10=document.formQuizz.r10.value;
+       var result="";
+       var resposta=[];
+
+       resposta[0] = "Leonardo DiCaprio";
+       resposta[1] = "Helen Mirren";
+       resposta[2] = "Tom Cruise";
+       resposta[3] = "Heath Ledger";
+       resposta[4] = "Millie Bobby Brown";
+       resposta[5] = "Tom Cruise";
+       resposta[6] = "Renee Zellweger";
+       resposta[7] = "Leonardo DiCaprio";
+       resposta[8] = "Anne Hathaway";
+       resposta[9] = "Tom Hanks";
+       resposta[10] = "Gal Gadot";
+
+       if ((resp0=="" && resp1=="" && resp2=="" && resp3=="" && resp4=="" && resp5=="" && resp6=="" && resp7=="" && resp8=="" && resp9=="" && resp10=="")) result="no";
+       if(result!= "no")
+       {
+           if(resp0 == resposta[0]) acertos++;
+           if(resp1 == resposta[1]) acertos++;
+           if(resp2 == resposta[2]) acertos++;
+           if(resp3 == resposta[3]) acertos++;
+           if(resp4 == resposta[4]) acertos++;
+           if(resp5 == resposta[5]) acertos++;
+           if(resp6 == resposta[6]) acertos++;
+           if(resp7 == resposta[7]) acertos++;
+           if(resp8 == resposta[8]) acertos++;
+           if(resp9 == resposta[9]) acertos++;
+           if(resp10 == resposta[10]) acertos++;
+
+           porcentagem=(acertos/11)*100;
+           alert('Total de Acertos ='+acertos + ' com um total de ' + Math.round(porcentagem)+ ' % '); 
+           if(Math.round(porcentagem)<=31) alert ('Que fraquinho, somente ' + Math.round(porcentagem)+ ' % ');
+           else if (Math.round(porcentagem)<50) alert ('Por pouco você não chegou a 50%, pois acertou somente ' + Math.round(porcentagem)+ ' % ');
+           else if (Math.round(porcentagem)<=69) alert ('Fez uma média razoável, entre 50% e 69%, pois acertou ' + Math.round(porcentagem)+ ' % ');
+           else if (Math.round(porcentagem)<=79) alert ('Está legalzinho, ficou entre 50% e 79%, pois acertou ' + Math.round(porcentagem)+ ' % ');
+           else if (Math.round(porcentagem)<=89) alert ('Está bem, ficou entre 80% e 89%, pois acertou ' + Math.round(porcentagem)+ ' % ');
+           else if (Math.round(porcentagem)<=95) alert ('Muito bom, ficou entre 90% e 95%, pois acertou ' + Math.round(porcentagem)+ ' % ');
+           else alert ('Excelente, você é um expert, pois acertou ' + Math.round(porcentagem)+ ' % ');
+       } else alert("Você não escolheu nada !!!")
+}
+</script>
+</body>
+</html>

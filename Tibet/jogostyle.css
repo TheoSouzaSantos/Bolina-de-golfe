@@ -1,0 +1,21 @@
+#forca {
+    font-size: 24px;
+}
+
+#palavra {
+    font-size: 32px;
+    letter-spacing: 10px;
+}
+
+.loss {
+    color: red;
+}
+
+.win {
+    color: green;
+}
+
+body{
+    background-image: url('imagens/oscar.jpg');
+    color: white;
+}

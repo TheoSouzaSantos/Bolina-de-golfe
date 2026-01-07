@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+		<head>
+			<meta charset="utf-8">
+			<title>Adivinhação</title>
+            <link rel="stylesheet" href="style.css">
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		</head>
+		<body background="Black" text="blue">
+		
+		 <a href="sorteio.html" style="color:white"><h1>Jogar de novo</h1></a>
+					<script>
+							var num2 = Math.floor(Math.random() * 51) 
+								num=0;
+								tentativas=0; 
+								
+
+							function checaNumero() {
+								num = prompt("Entre com o numero de 0 a 50 para tentar adivinhar");
+								if(num == null) return false;
+								if(num < 0)
+								{
+								  alert('Não coloque números Negativos');
+									
+								}
+								
+								
+								
+								if(parseInt(num).toString()=='NaN') {
+									alert('Digite um número válido');
+									checaNumero();
+									return false;
+								}
+								
+								tentativas=tentativas+1; 
+
+								if(parseInt(num) == num2){ 
+									alert("Parabéns você acertou em " + tentativas + " tentiva(s).");
+								}
+								else if(parseInt(num) < num2){ 
+									alert("Errou, tente um numero MAIOR.");
+									checaNumero();
+								}
+								else{
+									alert("Errou, tente um numero MENOR.");
+									checaNumero();
+								}   
+							}
+
+								checaNumero()
+					</script>
+		 
+	 
+		</body>
+		
+</html>

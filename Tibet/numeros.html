@@ -1,0 +1,327 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Adivinhando o número que você pensou de 1 até 31 !!!!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-image: url('imagens/oscar.jpg'); /* Alterado para oscar.jpg */
+            background-size: cover;
+            background-position: left;
+            color: white;
+        }
+        .navbar-dark .navbar-nav .nav-link {
+            color: rgba(255, 255, 255, 0.75);
+        }
+        .navbar-dark .navbar-nav .nav-link:hover {
+            color: rgba(255, 255, 255, 1);
+        }
+        .modal-dark .modal-content {
+            background-color: #343a40;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#" >Adivinhação de números</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="menu.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="imagens.html">Jogo de Imagens</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="tibet.html">Teste Tibet</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="numeros.html">Jogo de Adivinhação</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="quizz.html">Quiz</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="jogo.html">Jogo Livre</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="sorteio.html">Sorteio de números</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="desenvolvedores.html">Desenvolvedores</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="alert alert-primary alert-dismissible fade show" role="alert">
+            <strong>Pense num número de 1 até 31</strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="alert alert-primary alert-dismissible fade show" role="alert">
+            <strong>Não conte e nem fale, pois vou adivinhar !!!!</strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="alert alert-primary alert-dismissible fade show" role="alert">
+            <strong>Só errarei se você não identificar corretamente as cartas em que estão o número que você pensou !!!</strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="alert alert-primary alert-dismissible fade show" role="alert">
+            <strong>Então preste muita atenção ao escolher as cartas !!!</strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <script language="Javascript">
+            document.write('<center> <h1>Jogo da Adivinhação - Escolha um número de 1 até 31</h1>');
+            document.write('<form name="formAdivinha" method="get">');
+            document.write('<marquee behavior="alternate"><h2>Escolha abaixo as cartas em que seu número aparece.</h2></marquee>');
+        </script>
+            <table class="table table-dark">
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>3</td>
+                        <td>5</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>11</td>
+                        <td>13</td>
+                        <td>15</td>
+                    </tr>
+                    <tr> 
+                        <td>17</td>
+                        <td>19</td>
+                        <td>21</td>
+                        <td>23</td>
+                    </tr>
+                    <tr> 
+                        <td>25</td>
+                        <td>27</td>
+                        <td>29</td>
+                        <td>31</td>
+                    </tr>
+                </tbody>
+            </table>
+            <script language="Javascript">
+            document.write('<div class="form-check form-check-inline">');
+            document.write('<input class="form-check-input" type="radio" name="op1" value="Sim">Sim');
+            document.write('<input class="form-check-input ml-2" type="radio" name="op1" value="Não" checked>Não');
+            document.write('</div><br>');
+            
+        </script>
+            <table class="table table-dark">
+                <tbody>
+                    <tr>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>6</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>14</td>
+                        <td>15</td>
+                    </tr>
+                    <tr> 
+                        <td>18</td>
+                        <td>19</td>
+                        <td>22</td>
+                        <td>23</td>
+                    </tr>
+                    <tr> 
+                        <td>26</td>
+                        <td>27</td>
+                        <td>30</td>
+                        <td>31</td>
+                    </tr>
+                </tbody>
+            </table>
+            <script language="Javascript">
+            document.write('<div class="form-check form-check-inline">');
+            document.write('<input class="form-check-input" type="radio" name="op2" value="Sim">Sim');
+            document.write('<input class="form-check-input ml-2" type="radio" name="op2" value="Não" checked>Não');
+            document.write('</div><br>');
+            
+        </script>
+            <table class="table table-dark">
+                <tbody>
+                    <tr>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                    </tr>
+                    <tr> 
+                        <td>20</td>
+                        <td>21</td>
+                        <td>22</td>
+                        <td>23</td>
+                    </tr>
+                    <tr> 
+                        <td>28</td>
+                        <td>29</td>
+                        <td>30</td>
+                        <td>31</td>
+                    </tr>
+                </tbody>
+            </table>
+            <script language="Javascript">
+            document.write('<div class="form-check form-check-inline">');
+            document.write('<input class="form-check-input" type="radio" name="op3" value="Sim">Sim');
+            document.write('<input class="form-check-input ml-2" type="radio" name="op3" value="Não" checked>Não');
+            document.write('</div><br>');
+            
+        </script>
+            <table class="table table-dark">
+                <tbody>
+                    <tr>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                    </tr>
+                    <tr> 
+                        <td>24</td>
+                        <td>25</td>
+                        <td>26</td>
+                        <td>27</td>
+                    </tr>
+                    <tr> 
+                        <td>28</td>
+                        <td>29</td>
+                        <td>30</td>
+                        <td>31</td>
+                    </tr>
+                </tbody>
+            </table>
+            <script language="Javascript">
+            document.write('<div class="form-check form-check-inline">');
+            document.write('<input class="form-check-input" type="radio" name="op4" value="Sim">Sim');
+            document.write('<input class="form-check-input ml-2" type="radio" name="op4" value="Não" checked>Não');
+            document.write('</div><br>');
+            
+        </script>
+            <table class="table table-dark">
+                <tbody>
+                    <tr>
+                        <td>16</td>
+                        <td>17</td>
+                        <td>18</td>
+                        <td>19</td>
+                    </tr>
+                    <tr>
+                        <td>20</td>
+                        <td>21</td>
+                        <td>22</td>
+                        <td>23</td>
+                    </tr>
+                    <tr> 
+                        <td>24</td>
+                        <td>25</td>
+                        <td>26</td>
+                        <td>27</td>
+                    </tr>
+                    <tr> 
+                        <td>28</td>
+                        <td>29</td>
+                        <td>30</td>
+                        <td>31</td>
+                    </tr>
+                </tbody>
+            </table>
+            <script language="Javascript">
+            document.write('<div class="form-check form-check-inline">');
+            document.write('<input class="form-check-input" type="radio" name="op5" value="Sim">Sim');
+            document.write('<input class="form-check-input ml-2" type="radio" name="op5" value="Não" checked>Não');
+            document.write('</div><br>');
+            
+            document.write('<button type="button" class="btn btn-primary mt-3" onclick="respostas()">Ver o Resultado</button>');
+            document.write('<button type="reset" class="btn btn-secondary mt-3">Limpar Respostas</button>');
+            document.write('</form></center>');
+        </script>
+    </div>
+
+    <div class="modal fade" id="noSelectionModal" tabindex="-1" role="dialog" aria-labelledby="noSelectionModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content modal-dark">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="noSelectionModalLabel">Atenção</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Você não escolheu nenhuma carta.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function respostas() {
+            var acertos = 0;
+            
+            var resp1 = document.formAdivinha.op1.value;
+            var resp2 = document.formAdivinha.op2.value;
+            var resp3 = document.formAdivinha.op3.value;
+            var resp4 = document.formAdivinha.op4.value;
+            var resp5 = document.formAdivinha.op5.value;
+            
+            if (resp1 == "Sim") acertos += 1;
+            if (resp2 == "Sim") acertos += 2;
+            if (resp3 == "Sim") acertos += 4;
+            if (resp4 == "Sim") acertos += 8;
+            if (resp5 == "Sim") acertos += 16;
+            
+            if (acertos > 0) {
+                document.write('<div style="background-color: #343a40; color: white; padding: 20px;">');
+                document.write('<center><h2>O número que você pensou foi: ' + acertos + '</h2><br />');
+                document.write('<br /><br />');
+                document.write('<img src="imagens/adivinhador.jpg" width="300" height="300" class="img-fluid mb-2"/>');
+                document.write('<br /><br /><a href=""><h3 style="color: white;">Tentar Novamente!!!</h3></a>');
+                document.write('</center> </div>');
+            } else {
+                $('#noSelectionModal').modal('show');
+            }
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
+

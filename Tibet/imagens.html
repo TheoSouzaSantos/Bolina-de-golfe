@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Adivinhando o que você pensou!!!</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #343a40;
+            color: #ffffff;
+            text-align: center;
+        }
+        .container {
+            margin-top: 20px;
+        }
+        .card {
+            margin: 10px 0;
+        }
+        .navbar-nav .nav-link {
+            transition: background-color 0.3s;
+        }
+        .navbar-nav .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        .btn-sm {
+            width: 80px; /* Ajuste o tamanho conforme necessário */
+        }
+    </style>
+</head>
+<body> 
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#" >Adivinhação de imagens</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="menu.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="imagens.html">Jogo de Imagens</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="tibet.html">Teste Tibet</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="numeros.html">Jogo de Adivinhação</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="quizz.html">Quiz</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="jogo.html">Jogo Livre</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="sorteio.html">Sorteio de números</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="desenvolvedores.html">Desenvolvedores</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+    <div class="container mt-4">
+        <div class="alert alert-primary" role="alert">
+            Veja a carta a seguir, memorize uma imagem, e espere que vou adivinhar.
+        </div>
+        <div class="alert alert-secondary" role="alert">
+            Só errarei se você não identificar corretamente as cartas em que está a imagem que você pensou!!!
+        </div>
+        <div class="alert alert-info" role="alert">
+            Então preste muita atenção ao escolher as cartas!!!
+        </div>
+
+        <h1>Jogo de Imagens</h1>
+        <form name="formAdivinha" method="get">
+            <img src="imagens/principal.png" class="img-fluid mb-4" alt="Imagem Principal">
+            <marquee behavior="alternate"><h2>Escolha abaixo as cartas em que sua imagem aparece.</h2></marquee>
+            
+            <div class="card bg-dark text-white">
+                <img src="./imagens/Carta 11.png" class="card-img-top" alt="Carta 1">
+                <div class="card-body">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="op1" id="op1Sim" value="Sim">
+                        <label class="form-check-label" for="op1Sim">Sim</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="op1" id="op1Nao" value="Não" checked>
+                        <label class="form-check-label" for="op1Nao">Não</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card bg-dark text-white">
+                <img src="./imagens/Carta 21.png" class="card-img-top" alt="Carta 2">
+                <div class="card-body">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="op2" id="op2Sim" value="Sim">
+                        <label class="form-check-label" for="op2Sim">Sim</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="op2" id="op2Nao" value="Não" checked>
+                        <label class="form-check-label" for="op2Nao">Não</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card bg-dark text-white">
+                <img src="./imagens/Carta 31.png" class="card-img-top" alt="Carta 3">
+                <div class="card-body">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="op3" id="op3Sim" value="Sim">
+                        <label class="form-check-label" for="op3Sim">Sim</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="op3" id="op3Nao" value="Não" checked>
+                        <label class="form-check-label" for="op3Nao">Não</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card bg-dark text-white">
+                <img src="./imagens/Carta 41.png" class="card-img-top" alt="Carta 4">
+                <div class="card-body">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="op4" id="op4Sim" value="Sim">
+                        <label class="form-check-label" for="op4Sim">Sim</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="op4" id="op4Nao" value="Não" checked>
+                        <label class="form-check-label" for="op4Nao">Não</label>
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" class="btn btn-primary mt-3" onclick="respostas()">Ver o Resultado</button>
+            <button type="reset" class="btn btn-secondary mt-3">Limpar Respostas</button>
+        </form>
+    </div>
+
+    <script>
+        function respostas() {
+            var posicao = 0;
+            var resp1 = document.formAdivinha.op1.value;
+            var resp2 = document.formAdivinha.op2.value;
+            var resp3 = document.formAdivinha.op3.value;
+            var resp4 = document.formAdivinha.op4.value;
+
+            if (resp1 == "Sim") posicao += 1;
+            if (resp2 == "Sim") posicao += 2;
+            if (resp3 == "Sim") posicao += 8;
+            if (resp4 == "Sim") posicao += 4;
+
+            if (posicao > 0) {
+                document.body.innerHTML = `
+                    <div class="container mt-4">
+                        <div class="alert alert-success" role="alert">
+                            <h4 class="alert-heading">A imagem que você pensou foi:</h4>
+                            <img src="imagens/${posicao}.png" class="img-fluid mb-3" alt="Imagem ${posicao}">
+                            <hr>
+                            <img src="imagens/adivinhador.jpg" class="img-fluid" alt="Adivinhador">
+                            <br><br>
+                            <a href="" class="btn btn-primary mt-3">Tentar Novamente!!!</a>
+                        </div>
+                    </div>
+                `;
+            } else {
+                alert('Você não escolheu nenhuma carta');
+            }
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Tibetano</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f0f0f0; padding: 20px; color:white;
+        background-repeat: no-repeat;background-size: cover; }
+        select, button, input { margin: 10px 0; padding: 10px; font-size: 16px; }
+        button { background-color: #4CAF50; color: white; border: none; cursor: pointer; }
+        button:hover { background-color: #45a049; }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#" >Tibet</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="menu.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="imagens.html">Jogo de Imagens</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="tibet.html">Teste Tibet</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="numeros.html">Jogo de Adivinhação</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="quizz.html">Quiz</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="jogo.html">Jogo Livre</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="sorteio.html">Sorteio de números</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="desenvolvedores.html">Desenvolvedores</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <h2>Escolha sua preferência de animais</h2>
+    <form id="animalForm">
+        <select id="animalSelect">
+            <option value="" disabled selected>Escolha um animal</option>
+            <option value="Vaca">Vaca</option>
+            <option value="Tigre">Tigre</option>
+            <option value="Ovelha">Ovelha</option>
+            <option value="Cavalo">Cavalo</option>
+            <option value="Porco">Porco</option>
+        </select>
+        <br>
+        <button type="button" onclick="selecionarAnimal()">Selecionar</button>
+    </form>
+
+    <h3>Animais selecionados:</h3>
+    <ul id="listaAnimais"></ul>
+
+    <h3>Resultado:</h3>
+    <ul id="resultado"></ul>
+
+    <h2>Escreva uma palavra que descreva cada um dos seguintes:</h2>
+    <form id="palavrasForm">
+        <label>Cão: <input type="text" id="cão" /></label><br>
+        <label>Gato: <input type="text" id="gato" /></label><br>
+        <label>Rato: <input type="text" id="rato" /></label><br>
+        <label>Café: <input type="text" id="cafe" /></label><br>
+        <label>Mar: <input type="text" id="mar" /></label><br>
+        <button type="button" onclick="exibirPalavras()">Enviar</button>
+    </form>
+
+    <h3>Interpretações:</h3>
+    <ul id="interpretacoes"></ul>
+
+    <h2>Pense em alguém que você conheça e seja importante, que possa se relacionar com as seguintes cores. Apenas uma pessoa para cada cor:</h2>
+    <form id="coresForm">
+        <label style="color: yellow;">Amarelo: <input type="text" id="amarelo" /></label><br>
+        <label style="color: orange;">Laranja: <input type="text" id="laranja" /></label><br>
+        <label style="color: red;">Vermelho: <input type="text" id="vermelho" /></label><br>
+        <label style="color: white;">Branco: <input type="text" id="branco" /></label><br>
+        <label style="color: green;">Verde: <input type="text" id="verde" /></label><br>
+        <button type="button" onclick="exibirCores()">Enviar</button>
+    </form>
+
+    <h3>Resultados das Cores:</h3>
+    <ul id="resultadosCores"></ul>
+
+    <script>
+        const animais = [];
+        const maxAnimais = 5;
+        const relacoes = {
+            'Vaca': 'Carreira',
+            'Tigre': 'Carreira',
+            'Ovelha': 'Amor',
+            'Cavalo': 'Família',
+            'Porco': 'Dinheiro'
+        };
+
+        function selecionarAnimal() {
+            const select = document.getElementById('animalSelect');
+            const animal = select.value;
+
+            if (animal && !animais.includes(animal)) {
+                animais.push(animal);
+
+                const listaAnimais = document.getElementById('listaAnimais');
+                listaAnimais.innerHTML += `<li>${animais.length}º: ${animal}</li>`;
+
+                if (animais.length === maxAnimais) {
+                    exibirResultado();
+                    document.getElementById('animalForm').style.display = 'none';
+                }
+
+                select.options[select.selectedIndex].disabled = true;
+                select.selectedIndex = 0;
+            }
+        }
+
+        function exibirResultado() {
+            const resultado = document.getElementById('resultado');
+            resultado.innerHTML = '';
+            animais.forEach((animal, index) => {
+                resultado.innerHTML += `<li>${relacoes[animal]} vem em ${index + 1}º lugar (${animal})</li>`;
+            });
+        }
+
+        function exibirPalavras() {
+            const interpretacoes = document.getElementById('interpretacoes');
+            interpretacoes.innerHTML = '';
+
+            const cão = document.getElementById('cão').value;
+            const gato = document.getElementById('gato').value;
+            const rato = document.getElementById('rato').value;
+            const cafe = document.getElementById('cafe').value;
+            const mar = document.getElementById('mar').value;
+
+            interpretacoes.innerHTML += `<li>Cão: ${cão} (A sua personalidade)</li>`;
+            interpretacoes.innerHTML += `<li>Gato: ${gato} (Como você vê a pessoa que você gosta)</li>`;
+            interpretacoes.innerHTML += `<li>Rato: ${rato} (Como você vê seus inimigos)</li>`;
+            interpretacoes.innerHTML += `<li>Café: ${cafe} (Como era a última coisa que você comeu)</li>`;
+            interpretacoes.innerHTML += `<li>Mar: ${mar} (Como você vê sua vida)</li>`;
+        }
+
+        function exibirCores() {
+            const resultadosCores = document.getElementById('resultadosCores');
+            resultadosCores.innerHTML = '';
+
+            const amarelo = document.getElementById('amarelo').value;
+            const laranja = document.getElementById('laranja').value;
+            const vermelho = document.getElementById('vermelho').value;
+            const branco = document.getElementById('branco').value;
+            const verde = document.getElementById('verde').value;
+
+            resultadosCores.innerHTML += `<li style="color: yellow;">Amarelo: ${amarelo} (Alguém que você nunca irá esquecer)</li>`;
+            resultadosCores.innerHTML += `<li style="color: orange;">Laranja: ${laranja} (Alguém que você considera um verdadeiro amigo)</li>`;
+            resultadosCores.innerHTML += `<li style="color: red;">Vermelho: ${vermelho} (Alguém que você ama)</li>`;
+            resultadosCores.innerHTML += `<li style="color: white;">Branco: ${branco} (Sua alma gêmea)</li>`;
+            resultadosCores.innerHTML += `<li style="color: green;">Verde: ${verde} (Alguém que você se lembrará para sempre)</li>`;
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
